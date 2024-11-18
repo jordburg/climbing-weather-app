@@ -10,7 +10,7 @@ import pool from "../db.js"
 router.get("/", async (req, res) => {
   try {
     // Use 'pool.query' to execute the SQL query
-    const result = await pool.query("SELECT * FROM products")
+    const result = await pool.query("SELECT * FROM locations")
     res.json(result.rows)
   } catch (err) {
     console.error(err.message)
